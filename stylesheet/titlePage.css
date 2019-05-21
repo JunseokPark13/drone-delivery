@@ -1,0 +1,77 @@
+@font-face {
+   font-family: 'Hangeul';
+   src: url("/etc/HangeulNuriR.ttf") format('truetype');
+}
+
+body {
+  font-family:Hangeul;
+  margin: auto auto;
+}
+
+header {
+  display:block;
+  margin-left:50px;
+  margin-right:50px;
+  margin-top:10px;
+  max-width:100%;
+  height:100px;
+}
+
+header nav img {
+  display:inline;
+  vertical-align: middle;
+  position:relative;
+}
+
+.navigation{
+  margin: 10px 10px;
+  font-size: 30px;
+}
+
+.navigation a{
+  text-decoration-line:none;
+}
+
+.navigation:hover{
+  text-shadow:3px 3px 3px #3798de;
+
+}
+
+section {
+  font-size:15px;
+}
+
+.articles {
+  margin-left: 20px;
+}
+
+article h1{
+  font-size:40px;
+  text-align:center;
+}
+
+article h2{
+  font-size:30px;
+}
+
+article h3{
+  font-size:20px;
+}
+
+.photo-transition {
+  width:100%;
+  height:500px;
+  position:relative;
+  display:inline-block;
+}
+
+.photo-transition img {
+  height:inherit;
+  margin:auto;
+  position:absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: opacity .5s ease-in-out;
+}

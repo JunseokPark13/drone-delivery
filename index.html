@@ -3,36 +3,20 @@
   <head>
     <meta charset="utf-8">
     <title>Be With Us, Fly With Us</title>
-    <style media="screen">
-      header {
-        margin-left:50px;
-        margin-right:50px;
-        max-width:1920px;
-        height:200px;
-      }
-
-      section {
-        margin-top:200px;
-      }
-
-      .photo-transition {
-        width:1500px;
-        margin:auto;
-      }
-      .photo-transition img {
-        width:1300px;
-        height:600px;
-        position:absolute;
-        transition: opacity .5s ease-in;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="stylesheet/titlePage.css">
+    <link rel="stylesheet" href="stylesheet/animate.css">
+    <link rel="stylesheet" href="stylesheet/hover.css" media="all">
   </head>
   <body>
     <header>
-      <img src="./images/logo.jpg">
-
       <nav>
-
+        <img src="./images/logo.jpg">
+        <span class="navigation hvr-bounce-in"><a href="#">기업 소개</a></span>
+        <span class="navigation hvr-bounce-in"><a href="#">서비스 소개</a></span>
+        <span class="navigation hvr-bounce-in"><a href="#">일반 사용자</a></span>
+        <span class="navigation hvr-bounce-in"><a href="#">기업 사용자</a></span>
+        <span class="navigation hvr-bounce-in"><a href="#">로그인</a></span>
+        <span class="navigation hvr-bounce-in"><a href="#">회원가입</a></span>
       </nav>
     </header>
 
@@ -41,14 +25,19 @@
     </aside>
 
     <section>
-      <article class="photo-transition">
-        <img src="https://skyward.io/wp-content/uploads/2016/06/drone-sunset-1.jpg">
-        <img src="https://www.allsure.com.au/wp-content/uploads/sites/15/drone-sunset.jpg">
-        <img src="https://blog.seagate.com/wp-content/uploads/2017/04/Drone-sunset-wide.jpg">
-      </article>
-      <article class="">
+      <div class="photo-transition">
+          <img id="first" src="https://skyward.io/wp-content/uploads/2016/06/drone-sunset-1.jpg">
+          <img id="second" src="https://www.allsure.com.au/wp-content/uploads/sites/15/drone-sunset.jpg">
+          <img id="third" src="https://blog.seagate.com/wp-content/uploads/2017/04/Drone-sunset-wide.jpg">
+      </div>
 
-      </article>
+      <div class="articles">
+        <article id="intro">
+          <div class="wow bounceInUp">
+          <h1>붕붕벤처 웹사이트에 오신 것을 환영합니다.</h1>
+          </div>
+        </article>
+      </div>
     </section>
 
     <footer>
@@ -62,11 +51,11 @@
       for (var i = 0; i < slides.length; i++) {
         slides[i].style.opacity = 0;
       }
-
       current = (current != slides.length - 1) ? current + 1 : 0;
       slides[current].style.opacity = 1;
-      console.log("current is " + current);
     }, 3000);
     </script>
+    <script src="scripts/wow.min.js"></script>
+    <script> new WOW().init();</script>
   </body>
 </html>
