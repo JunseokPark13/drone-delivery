@@ -3,5 +3,70 @@
   <head>
     <meta charset="utf-8">
     <title>Be With Us, Fly With Us</title>
+    <style media="screen">
+      header {
+        margin-left:50px;
+        margin-right:50px;
+        max-width:1920px;
+        height:200px;
+      }
+
+      section {
+        margin-top:200px;
+      }
+
+      .photo-transition {
+        width:1500px;
+        margin:auto;
+      }
+      .photo-transition img {
+        width:1300px;
+        height:600px;
+        position:absolute;
+        transition: opacity .5s ease-in;
+      }
+    </style>
   </head>
+  <body>
+    <header>
+      <img src="./images/logo.jpg">
+
+      <nav>
+
+      </nav>
+    </header>
+
+    <aside class="">
+
+    </aside>
+
+    <section>
+      <article class="photo-transition">
+        <img src="https://skyward.io/wp-content/uploads/2016/06/drone-sunset-1.jpg">
+        <img src="https://www.allsure.com.au/wp-content/uploads/sites/15/drone-sunset.jpg">
+        <img src="https://blog.seagate.com/wp-content/uploads/2017/04/Drone-sunset-wide.jpg">
+      </article>
+      <article class="">
+
+      </article>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <script type="text/javascript">
+    var current = 0, slides = document.querySelectorAll(".photo-transition img");
+
+    setInterval(function() {
+      for (var i = 0; i < slides.length; i++) {
+        slides[i].style.opacity = 0;
+      }
+
+      current = (current != slides.length - 1) ? current + 1 : 0;
+      slides[current].style.opacity = 1;
+      console.log("current is " + current);
+    }, 3000);
+    </script>
+  </body>
 </html>
