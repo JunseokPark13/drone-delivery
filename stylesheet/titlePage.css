@@ -75,3 +75,7 @@ article h3{
   bottom: 0;
   transition: opacity .5s ease-in-out;
 }
+
+#features table {
+  width:40%;
+}
