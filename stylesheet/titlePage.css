@@ -1,12 +1,15 @@
 @font-face {
    font-family: 'Hangeul';
-   src: url("/etc/HangeulNuriR.ttf") format('truetype');
+   src: url("etc/HangeulNuriR.ttf") format('truetype');
 }
 
-body {
+body{
   font-family:Hangeul;
   margin: auto auto;
+  background-image: url("images/background.png");
+  background-attachment: fixed;
 }
+
 
 header {
   display:inline-block;
@@ -30,32 +33,12 @@ header nav img {
 
 .navigation a{
   text-decoration-line:none;
+  color: #000000;
 }
 
 .navigation:hover{
-  text-shadow:3px 3px 3px #3798de;
+  /* text-shadow:3px 3px 3px #de3786; */
 
-}
-
-section {
-  font-size:15px;
-}
-
-.articles {
-  margin-left: 20px;
-}
-
-article h1{
-  font-size:40px;
-  text-align:center;
-}
-
-article h2{
-  font-size:30px;
-}
-
-article h3{
-  font-size:20px;
 }
 
 .photo-transition {
@@ -76,6 +59,97 @@ article h3{
   transition: opacity .5s ease-in-out;
 }
 
-#features table {
-  width:40%;
+section {
+  font-size:20px;
+}
+
+.articles article{
+  width:auto;
+  margin-left: 20px;
+  display:inline-flex;
+}
+
+article h1{
+  font-size:40px;
+  text-align:center;
+}
+
+article h2{
+  font-size:30px;
+}
+
+article h3{
+  font-size:20px;
+}
+
+.table-border {
+  border:1px solid black;
+}
+
+.table-head > th{
+  font-size: 30px;
+}
+
+.table-box {
+  text-align: center;
+  padding: 10px;
+}
+
+.box-250 td {
+  width: 250px;
+  height: 250px;
+}
+
+.box-400 td {
+  width: 400px;
+  height:400px;
+}
+
+.table-box img {
+  transition: all 0.3s ease-out;
+}
+
+.small-image img{
+  width:200px;
+  height:200px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.medium-image img{
+  width:400px;
+  height: 400px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.hover-scaleup img:hover {
+  transform:scale(1.2, 1.2);
+}
+
+#features-drone div {
+  width:auto;
+  /* display:flow-root; */
+}
+
+#features-drone table {
+  width:auto;
+}
+
+#features-fly div{
+  width:auto;
+  /* display:flex; */
+}
+
+#features-fly table {
+  width:auto;
+}
+
+#features-insurance div{
+  width:auto;
+  /* display: flex; */
+}
+
+#features-insurance table {
+  width:auto;
 }
