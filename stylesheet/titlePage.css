@@ -1,12 +1,12 @@
 @font-face {
    font-family: 'Hangeul';
-   src: url("etc/HangeulNuriR.ttf") format('truetype');
+   src: url("/etc/HangeulNuriR.ttf") format('truetype');
 }
 
 body{
   font-family:Hangeul;
   margin: auto auto;
-  background-image: url("images/background.png");
+  background-image: url("/images/background.png");
   background-attachment: fixed;
 }
 
